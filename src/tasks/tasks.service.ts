@@ -12,16 +12,7 @@ export class TasksService {
    }
 
     createTask(createDto: CreateDto): Task {
-        const { title, description }=createDto;
-        const task: Task={
-            id: uuid(),
-            title,
-            description,
-            status: TaskStatus.OPEN
-        }
-        
-        this.tasks.push(task);
-        return task;
+      return null;
     }
 
     getTaskById(id:string): Task{
@@ -30,9 +21,7 @@ export class TasksService {
 
     updateTaskStatus(id: string, status: TaskStatus): Task{
 
-        const task = this.getTaskById(id);
-        task.status = status;
-        return task;
+        return null
     }
 
     deleteTask(id: string){
