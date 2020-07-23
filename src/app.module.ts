@@ -4,7 +4,8 @@ import { AppService } from './app.service';
 import { TasksModule } from './tasks/tasks.module';
 
 @Module({
-  imports: [TasksModule],
+  imports: [TasksModule,
+    MongooseModule.forRoot('mongodb+srv://xavi:xavi78@cluster0.dtzfi.mongodb.net/Prueba?retryWrites=true&w=majority')],
   controllers: [AppController],
   providers: [AppService],
 })
